@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+h1{
+  font-family: 'Meddon', cursive;
+  font-size: 50px;
+  padding: 20px;
+}
+
+iframe{
+  border: 10px solid #ffffff;
+  border-radius: 10px;
+}
+
+p{
+font-family: 'Poppins',sans-serif;
+  color:gray;
+  font-size: 25px
+}
+
+body{
+  background: beige;
+}
+.container{
+  display: flex;
+  background-color: #CCD5AE;
+  justify-content: space-between;
+}
+.fcc-btn {
+  background-color: #CCD5AE;
+  color: white;
+  padding: 15px 25px;
+  text-decoration: none;
+}
+
+.cowprint{
+  background-image: url("https://wallpaperaccess.com/full/6172658.png") ;
+background-repeat: no-repeat;
+background-size: 100% 100%;  
+object-fit: cover;
+text-color:darkseagreen
+}

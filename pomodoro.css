@@ -1,0 +1,33 @@
+h1{
+  font-family: 'Meddon', cursive;
+  font-size: 50px;
+  padding: 20px;
+}
+iframe{
+border: 20px solid #ffffff;
+  border-radius: 10px;
+}
+
+p{
+  color:black;
+  font-size: 20px
+}
+
+body{
+background: #CCDBFD;
+}
+
+.container{
+  display: flex;
+  background-color: #ffffff;
+  justify-content: space-between;
+  margin-bottom: 40 px;
+}
+.fcc-btn {
+  background-color: #ffffff;
+  color: black;
+  padding: 15px 25px;
+  text-decoration: none;
+}
+
+

@@ -1,0 +1,196 @@
+.container{
+  display: flex;
+  background-color: #CCD5AE;
+  justify-content: space-between;
+  margin-bottom: 40 px;
+}
+.fcc-btn {
+  background-color: #CCD5AE;
+  color: white;
+  padding: 15px 25px;
+  text-decoration: none;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+html {
+    background-color: beige;
+    background-image: radial-gradient(circle, hsla(0,0%,100%,.1), hsla(0,0%,0%,.75)),
+  linear-gradient(left, transparent 50%, hsla(0,0%,0%,.01) 50%);
+    
+}
+  /**********/
+ /* Slider */
+/**********/
+
+.slider {
+    background-color: #fff;
+    height: 18.3em;
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    width: 25.2em;
+}
+img{
+  Height: 20em;
+	Width: 30em;
+  object-fit:cover;
+}
+Correct ratio{
+	Object-fit: cover; 
+}
+/* Frame */
+
+.slider:before {
+    background-color: #CCD5AE;
+    bottom: -2.5em;
+    content: '';
+    left: -2.5em;
+    position: absolute;
+    right: -2.5em;
+    top: -2.5em;
+    z-index: -1;
+}
+
+.slider li {
+    box-shadow: 0 -1px 0 2px hsla(0,0%,0%,.03);
+    list-style:none;
+    position: absolute;
+}
+.slider input {
+    display: none;
+}
+
+/* Navigation */
+
+.slider label {
+    background-color: #CCD5AE;
+    background-image: linear-gradient(transparent, hsla(0,0%,0%,.25));
+    border: .2em solid transparent;
+    bottom: .5em;
+    border-radius: 100%;
+    cursor: pointer;
+    display: block;
+    height: .5em;
+    left: 24em;
+    opacity: 0;
+    position: absolute;
+    transition: .25s;
+    width: .5em;
+    visibility: hidden;
+    z-index: 10;
+}
+.slider label:after {
+    border-radius: 100%;
+    bottom: -.2em;
+    box-shadow: inset 0 0 0 .2em #111,
+                inset 0 2px 2px #000,
+                0 1px 1px hsla(0,0%,100%,.25);
+    content: '';
+    left: -.2em;
+    position: absolute;
+    right: -.2em;
+    top: -.2em;
+}
+.slider:hover label {
+    opacity: 1;
+    visibility: visible;
+}
+.slider input:checked + label {
+    background-color: #fff;
+}
+.slider:hover li:nth-child(1) label {
+    left: .5em;
+}
+.slider:hover li:nth-child(2) label {
+    left: 2em;
+}
+.slider:hover li:nth-child(3) label {
+    left: 3.5em;
+}
+.slider:hover li:nth-child(4) label {
+    left: 5em;
+}
+.slider:hover li:nth-child(5) label {
+    left: 6.5em;
+}
+.slider:hover li:nth-child(6) label {
+    left: 8em;
+}
+
+
+/* Images */
+
+.slider img {
+    height: 18.75em;
+    opacity: 0;
+    transition: .25s;
+    width: 25em;
+    vertical-align: top;
+    visibility: hidden;
+}
+.slider li input:checked ~ img {
+    opacity: 1;
+    visibility: visible;
+    z-index: 10;
+} 
+blockquote{
+  font-family: 'Poppins',sans-serif;
+  font-size: 30px;
+  padding: 20px;
+  
+}
+
+
+
+h1{
+  font-family: 'Meddon', cursive;
+  font-size: 50px;
+  padding: 20px;
+}
+
+
+h2{
+  font-size: 45px;
+  position: absolute;
+  top: 1050px;
+  width: 100%;
+  color:white;
+  padding-top: 1px;
+}
+
+h3{
+  font-size: 25px;
+  position: absolute;
+  top: 1250px;
+  width: 100%;
+  color:white;
+  padding-top: 1px;
+}
+.imgs{
+  display: flex;
+  justify-content: space-between;
+  width: 10%;
+  margin-bottom: 100px;
+}
+.img{
+  height: 75px;
+	width: 75px;
+}
+Correct ratio{
+	Object-fit: cover; 
+}
+
+.cowprint{
+  background-image: url("https://wallpaperaccess.com/full/6172658.png") ;
+background-repeat: no-repeat;
+background-size: 100% 100%;  
+object-fit: cover;
+color:black;
+}
+.plsWork{
+  padding-top: 200px ;
+}
+
