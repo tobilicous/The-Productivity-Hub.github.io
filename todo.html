@@ -6,24 +6,18 @@
   <center>
     <h1>to do list</h1>
   </center>
-  <div class="h">
-    <a class="fcc-btn" href="index.html"> Home </a>
-    <a class="fcc-btn" href="pomodoro.html"> Pomodoro </a>
-    <a class="fcc-btn" href="relaxation.html"> Relaxation </a>
-    <a class="fcc-btn" href="todo.html"> To Do list </a>
-    <a class="fcc-btn" href="calendar.html"> Calendar </a>
-    <a class="fcc-btn" href="about.html"> About The Team </a>
-    <a class="fcc-btn" href="journal.html"> Journal </a>
-    <a class="fcc-btn" href="newsletter.html"> Newsletter </a>
-  </div>
+<div class="container">
+      <a class="fcc-btn" href="index.html"> Home </a>
+      <a class="fcc-btn" href="pomodoro.html"> Pomodoro </a>
+      <a class="fcc-btn" href="relaxation.html"> Relaxation </a>
+  <a class="fcc-btn" href="journal.html"> Journal </a>
+      <a class="fcc-btn" href="about.html"> About The Team </a>
+    </div>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap" rel="stylesheet">
   <!--Font Awesome CDN-->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
-  <!--Stylesheet-->
-  <style media="screen">
-    *,
-    *:before,
-    *:after {
+  <style>
+    * {
       padding: 0;
       margin: 0;
       box-sizing: border-box;
@@ -32,25 +26,31 @@
     body {
       height: 100vh;
       background: #CCDBFD;
+      font-family: 'Poppins', sans-serif;
     }
-  h1{
-    font-family: 'Meddon', cursive;
-    font-size: 50px;
-    padding: 50px;
-  }
-  .h{
-  display: flex;
-  background-color: #ffffff;
-  justify-content: space-between;
-  margin-bottom: 40 px;
-}
-.fcc-btn {
-  background-color: #ffffff;
-  color: black;
-  padding: 15px 25px;
-  text-decoration: none;
-}
-    
+
+    h1 {
+      font-family: 'Meddon', cursive;
+      font-size: 50px;
+      padding: 50px;
+      text-align: center;
+    }
+
+    .h {
+      display: flex;
+      background-color: #ffffff;
+      justify-content: space-between;
+      margin-bottom: 40px;
+      padding: 10px;
+    }
+
+    .fcc-btn {
+      background-color: #ffffff;
+      color: black;
+      padding: 15px 25px;
+      text-decoration: none;
+    }
+
     .container {
       width: 40%;
       min-width: 450px;
@@ -63,8 +63,10 @@
     }
 
     #newtask {
-      position: relative;
       padding: 30px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
     }
 
     #newtask input {
@@ -86,8 +88,6 @@
     }
 
     #newtask button {
-      position: relative;
-      float: right;
       width: 20%;
       height: 45px;
       border-radius: 5px;
@@ -107,7 +107,6 @@
       margin-top: 10px;
       border-radius: 10px;
       width: 100%;
-      position: relative;
     }
 
     .task {
@@ -124,7 +123,6 @@
     }
 
     .task span {
-      font-family: 'Poppins', sans-serif;
       font-size: 15px;
       font-weight: 400;
     }
@@ -145,53 +143,48 @@
     }
   </style>
 </head>
-
 <body>
   <div class="container">
     <div id="newtask">
-      <input type="text" placeholder="Task to be done..">
+      <input type="text" id="taskInput" placeholder="Task to be done..">
       <button id="push">Add</button>
     </div>
-
     <div id="tasks"></div>
   </div>
-  <!--Script-->
-  <script type="text/javascript">
-    document.querySelector('#push').onclick = function () {
-      if (document.querySelector('#newtask input').value.length == 0) {
-        alert("Please Enter a Task")
-      }
-      else {
-        document.querySelector('#tasks').innerHTML += `
-            <div class="task">
-                <span id="taskname">
-                    ${document.querySelector('#newtask input').value}
-                </span>
-                <button class="delete">
-                    <i class="far fa-trash-alt"></i>
-                </button>
-            </div>
-        `;
 
-        var current_tasks = document.querySelectorAll(".delete");
-        for (var i = 0; i < current_tasks.length; i++) {
-          current_tasks[i].onclick = function () {
-            this.parentNode.remove();
-          }
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      document.querySelector('#push').addEventListener('click', function () {
+        const taskInput = document.querySelector('#taskInput');
+        const taskText = taskInput.value.trim();
+
+        if (taskText === "") {
+          alert("Please Enter a Task");
+        } else {
+          const taskList = document.querySelector('#tasks');
+          const taskElement = document.createElement('div');
+          taskElement.className = "task";
+
+          const taskName = document.createElement('span');
+          taskName.id = "taskname";
+          taskName.innerText = taskText;
+
+          const deleteButton = document.createElement('button');
+          deleteButton.className = "delete";
+          deleteButton.innerHTML = '<i class="far fa-trash-alt"></i>';
+          
+          deleteButton.addEventListener('click', function () {
+            taskElement.remove();
+          });
+
+          taskElement.appendChild(taskName);
+          taskElement.appendChild(deleteButton);
+          taskList.appendChild(taskElement);
+
+          taskInput.value = "";
         }
-
-      }
-      
-    }
+      });
+    });
   </script>
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Meddon&display=swap" rel="stylesheet">
-
-
-  
 </body>
-
-
 </html>

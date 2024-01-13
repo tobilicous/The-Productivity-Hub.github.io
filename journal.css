@@ -10,7 +10,7 @@ body{
 }
 ::selection{
   color: #fff;
-  background: #618cf8;
+  background: #fba2c6;
 }
 .wrapper{
   margin: 50px;
@@ -40,14 +40,14 @@ body{
 .add-box .icon{
   height: 78px;
   width: 78px;
-  color: #88ABFF;
+  color: #fba2c6;
   font-size: 40px;
   border-radius: 50%;
   justify-content: center;
-  border: 2px dashed #88ABFF;
+  border: 2px dashed #fba2c6;
 }
 .add-box p{
-  color: #88ABFF;
+  color: #fba2c6;
   font-weight: 500;
   margin-top: 20px;
 }
@@ -226,7 +226,7 @@ form button{
   cursor: pointer;
   font-size: 17px;
   border-radius: 4px;
-  background: #6A93F8;
+  background: #fba2c6;
 }
 @media (max-width: 660px){
   .wrapper{
